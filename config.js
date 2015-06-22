@@ -10,8 +10,18 @@ config = {
     // When running Ghost in the wild, use the production environment
     // Configure your URL and mail settings here
     production: {
-        url: 'http://sidrules.co.in',
-        mail: {},
+        url: 'https://sidtri.com',
+        mail: {
+	transport: 'SMTP',
+        from: '"sid" <koolspy.siddhu@gmail.com>',
+    	 options: {
+          service: 'Mailgun',
+           auth: {
+            user: 'postmaster@sidrules.co.in',
+            pass: 'e4462dedd024910ded4cd26c020f621e'
+           }
+         }
+	},
         database: {
             client: 'sqlite3',
             connection: {
